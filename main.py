@@ -5,9 +5,15 @@ import webview
 from src.scraper import getPage, searchq
 from src.components import PageComponent, AudioGridComponent, AudioCardComponent
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+if getattr(sys, 'frozen', False):
+    BASE_DIR = sys._MEIPASS
+    ROOT_DIR = os.path.dirname(sys.executable)
+else:
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    ROOT_DIR = BASE_DIR
+
 ASSETS_DIR = os.path.join(BASE_DIR, 'assets')
-DOWNLOADS_DIR = os.path.join(BASE_DIR, 'downloads')
+DOWNLOADS_DIR = os.path.join(ROOT_DIR, 'downloads')
 
 if not os.path.exists(DOWNLOADS_DIR):
     os.mkdir(DOWNLOADS_DIR)

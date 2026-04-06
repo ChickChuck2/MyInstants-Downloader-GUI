@@ -2,3 +2,8 @@ __pycache__/
 *.pyc
 ui.html
 downloads/
+
+# PyInstaller Build Files
+build/
+dist/
+*.spec
