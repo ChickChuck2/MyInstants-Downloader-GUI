@@ -6,18 +6,15 @@
 A GUI utility to play and download sounds from [myinstants.com](https://www.myinstants.com/en/index/in/) made using python with least effort 💀. A great tool for s**tposters and content creators.
 
 
-# Screenshots
-## Main Screen 
-![SCREEM](https://i.imgur.com/gk1dYcf.png)
-## Search Function 
-![SCREEM](https://i.imgur.com/klNR5t3.png)
 
-# How to run it ? (Currently only Windows supported.)
-### PORTABLE .zip
-Go to [Releases Page](https://github.com/Shagnikpaul/MyInstants-Downloader/releases/tag/release), download the latest `MyInstants_Downloader.zip` then extract the zip
-wherever you want and execute the `main.exe` file in that directory.
-### SETUP .exe
-Go to [Releases Page](https://github.com/Shagnikpaul/MyInstants-Downloader/releases/tag/release), download the `setup.exe` and then run the installer like any normal software installer of Windows.
+
+# How to run it ?
+### Run from source (Python)
+Install dependencies using `pip install -r requirements.txt`.
+Then, simply run `python main.py` in your terminal to launch the desktop webview app.
+
+### Pre-compiled Executables (Windows)
+Go to the [Releases Page](https://github.com/Shagnikpaul/MyInstants-Downloader/releases/tag/release) to download portable or setup binaries when available.
 
 # How to use it ?
 # ⚠ IMPORTANT NOTE / WARNING
@@ -30,7 +27,7 @@ Click on the sound button to play that particular sound and download it by click
 You can click on the <kbd>Open downloads folder</kbd> button to access the folder.All .mp3 files which you want to download by pressing the **download** button are saved in **downloads** folder present in the directory which has the `main.exe` file.
 ![SHOT](https://i.imgur.com/cuiyA9t.png)
 # Libraries Used.
-- Custom Tkinter for GUI
+- PyWebView for the desktop GUI interface
 - Beautiful Soup for web scraping
-- Python Requests for html extraction and file download.
-- playsound library for playing sounds.
+- Python Requests for HTML extraction
+- Vanilla HTML/JS for audio playback and component rendering
